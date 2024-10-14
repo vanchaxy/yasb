@@ -52,9 +52,9 @@ def get_window_icon(hwnd, dpi):
                 bmpstr = hbmp.GetBitmapBits(True)
  
                 img = Image.frombuffer(
-                    'RGBA',
+                    'RGBX',
                     (bmpinfo['bmWidth'], bmpinfo['bmHeight']),
-                    bmpstr, 'raw', 'BGRA', 0, 1
+                    bmpstr, 'raw', 'BGRX', 0, 1
                 )
                 return img
             finally:
